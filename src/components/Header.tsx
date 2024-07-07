@@ -45,7 +45,7 @@ function Header() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Link to={'/'}>
+          <Link to={'/'} style={{textDecoration: 'none'}}>
             <Typography
               variant="h6"
               noWrap
@@ -94,8 +94,8 @@ function Header() {
               }}
             >
               {pages.map((page) => (
-                <Link to={page.link}>
-                  <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                <Link to={page.link} key={page.name} style={{textDecoration: 'none'}}>
+                  <MenuItem onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page.name}</Typography>
                   </MenuItem>
                 </Link>
@@ -123,7 +123,7 @@ function Header() {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link to={page.link} key={page.name}>
+              <Link to={page.link} key={page.name} style={{textDecoration: 'none'}}>
                 <Button
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
