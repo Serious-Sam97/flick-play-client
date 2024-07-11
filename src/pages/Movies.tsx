@@ -36,7 +36,7 @@ function Movies() {
     return (
         <Container>
             <h1>Popular Movies</h1>
-            <Grid container spacing={12}>
+            <Grid container spacing={12} style={moviesStyle}>
                 {movies.map(movie => {
                     return (
                         <Grid item xs={3}>
@@ -48,5 +48,9 @@ function Movies() {
         </Container>
     );
 }
+
+const moviesStyle = {
+    marginBottom: '10%'
+};
 
 export default Movies;
